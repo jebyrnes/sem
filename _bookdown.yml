@@ -1,0 +1,17 @@
+---
+book_filename: "Structural Equation Modeling for Ecology and Evolution in R"
+author: "Jarrett Byrnes, Jon Lefcheck, James Grace"
+date: "`r Sys.Date()`"
+
+rmd_files: ["index.Rmd"]
+
+output_dir: "docs"
+
+output:
+  bookdown::html_book:
+    highlight: espresso
+
+bibliography: ["sem.bib"]
+biblio-style: apalike
+link-citations: yes
+---
