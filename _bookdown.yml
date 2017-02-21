@@ -1,1 +1,7 @@
 rmd_files: ["index.Rmd", "why.Rmd"]
+
+output:
+  bookdown::gitbook:
+    config:
+      toc:
+      collapse: section
