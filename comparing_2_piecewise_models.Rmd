@@ -1,0 +1,3 @@
+#  Can you statistically compare two C statistics? Yes.  
+
+Shipley shows that you can compare multiple piecewise fits using an AIC value derived from Fisher's C. He points out that Fisher's C, as it is -2 log(p), is a deviance. Thus, we should be able to use it to compare two models directly, presumed that one is nested within the other, for a log ratio test.

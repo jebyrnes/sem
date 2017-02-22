@@ -33,8 +33,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="glms-nonlinearities-and-c-statistics.html">
+<link rel="prev" href="why-structural-equation-modeling.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -98,17 +98,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="why-structural-equation-modeling" class="section level1">
-<h1><span class="header-section-number">1</span> Why Structural Equation Modeling</h1>
-<div id="the-world-we-grew-up-in" class="section level2">
-<h2><span class="header-section-number">1.1</span> The World We Grew Up In</h2>
+<div id="glms-nonlinearities-and-c-statistics" class="section level1 unnumbered">
+<h1>GLMs, Nonlinearities and C-statistics</h1>
+<div id="what-is-a-c-static-or-its-ilk-for" class="section level2">
+<h2><span class="header-section-number">1.4</span> What is a C-static or its ilk for</h2>
+<div id="comparison-to-a-saturated-model" class="section level3">
+<h3><span class="header-section-number">1.4.1</span> Comparison to a saturated model</h3>
+<ul>
+<li>Currently with how we use the c-statistic</li>
+</ul>
 </div>
-<div id="exploring-systems" class="section level2">
-<h2><span class="header-section-number">1.2</span> Exploring Systems</h2>
+<div id="comparison-to-an-alternate-model" class="section level3">
+<h3><span class="header-section-number">1.4.2</span> Comparison to an alternate model</h3>
+<ul>
+<li>New</li>
+</ul>
 </div>
-<div id="one-car-many-engines" class="section level2">
-<h2><span class="header-section-number">1.3</span> One Car, Many Engines</h2>
+<div id="information-theoretic-approaches-to-model-comparison" class="section level3">
+<h3><span class="header-section-number">1.4.3</span> Information theoretic approaches to model comparison</h3>
+<ul>
+<li>Shipley paper</li>
+<li>MUST HAVE SAME VARIABLES</li>
+<li>Other ICs that might be better</li>
+</ul>
+</div>
+</div>
+<div id="how-do-we-calculate-information-about-missing-links-to-integrate-into-a-c-type-statistic" class="section level2">
+<h2><span class="header-section-number">1.5</span> How do we calculate information about missing links to integrate into a c-type statistic?</h2>
+<div id="if-relationships-are-symmetrical-i.e.linear-use-current-techniques" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> If relationships are symmetrical, i.e. linear, use current techniques</h3>
+</div>
+<div id="if-relationships-are-assymetric-i.e.glms-or-other-nonlinearities" class="section level3">
+<h3><span class="header-section-number">1.5.2</span> If relationships are assymetric, i.e. GLMs or other nonlinearities</h3>
+<ul>
+<li>You can specificy directionality if you know it
+<ul>
+<li>Do no present c-statistic unless user specifies directionality</li>
+<li>list of formulae to specify directions</li>
+</ul></li>
+</ul>
+</div>
+<div id="if-relationships-are-asymmetric-and-no-known-directionality" class="section level3">
+<h3><span class="header-section-number">1.5.3</span> If relationships are asymmetric and no known directionality</h3>
+<ul>
+<li>Abandon SEM - you don’t know your model!</li>
+<li>Conservative hack: choose the lower p-value</li>
+<li>Distance based or other non-parametric correlation of residuals</li>
+</ul>
 
+</div>
 </div>
 </div>
             </section>
@@ -116,8 +154,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="glms-nonlinearities-and-c-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="why-structural-equation-modeling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
