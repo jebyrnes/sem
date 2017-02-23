@@ -1,4 +1,4 @@
-rmd_files: ["index.Rmd", "why.Rmd"]
+rmd_files: ["index.Rmd",  "why.Rmd", "meeting_agenda.Rmd", "c_statistic.Rmd"]
 
 output:
   bookdown::gitbook:

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Structural Equation Modeling for Ecology and Evolution</title>
+  <meta name="description" content="Structural Equation Modeling for Ecology and Evolution">
+  <meta name="generator" content="bookdown 0.3.9 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Structural Equation Modeling for Ecology and Evolution" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://jebyrnes.github.io/sem" />
+  
+  
+  <meta name="github-repo" content="jebyrnes/sem" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Structural Equation Modeling for Ecology and Evolution" />
+  <meta name="twitter:site" content="@jebyrnes" />
+  
+  
+
+<meta name="author" content="Jarrett Byrnes">
+<meta name="author" content="Jon Lefcheck">
+<meta name="author" content="James Grace">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="why-structural-equation-modeling.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Agenda</a></li>
+<li class="chapter" data-level="1" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html"><i class="fa fa-check"></i><b>1</b> Why Structural Equation Modeling</a><ul>
+<li class="chapter" data-level="1.1" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#the-world-we-grew-up-in"><i class="fa fa-check"></i><b>1.1</b> The World We Grew Up In</a></li>
+<li class="chapter" data-level="1.2" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#exploring-systems"><i class="fa fa-check"></i><b>1.2</b> Exploring Systems</a></li>
+<li class="chapter" data-level="1.3" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#one-car-many-engines"><i class="fa fa-check"></i><b>1.3</b> One Car, Many Engines</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html"><i class="fa fa-check"></i><b>2</b> (APPENDIX) GLMs, Nonlinearities and C-statistics</a><ul>
+<li class="chapter" data-level="2.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#testing-models-in-sem"><i class="fa fa-check"></i><b>2.1</b> Testing models in SEM</a></li>
+<li class="chapter" data-level="2.2" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#what-is-the-c-statistic"><i class="fa fa-check"></i><b>2.2</b> What is the C-statistic</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#definition-of-d-separation-from-pearl"><i class="fa fa-check"></i><b>2.2.1</b> Definition of D-separation from Pearl</a></li>
+<li class="chapter" data-level="2.2.2" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#formation-by-shipley-into-a-single-statistic"><i class="fa fa-check"></i><b>2.2.2</b> Formation by Shipley into a single statistic</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#what-is-a-c-static-or-its-ilk-for"><i class="fa fa-check"></i><b>2.3</b> What is a C-static or its ilk for</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#comparison-to-a-saturated-model"><i class="fa fa-check"></i><b>2.3.1</b> Comparison to a saturated model</a></li>
+<li class="chapter" data-level="2.3.2" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#comparison-to-an-alternate-model"><i class="fa fa-check"></i><b>2.3.2</b> Comparison to an alternate model</a></li>
+<li class="chapter" data-level="2.3.3" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#information-theoretic-approaches-to-model-comparison"><i class="fa fa-check"></i><b>2.3.3</b> Information theoretic approaches to model comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#how-do-we-calculate-information-about-missing-links-to-integrate-into-a-c-type-statistic"><i class="fa fa-check"></i><b>2.4</b> How do we calculate information about missing links to integrate into a c-type statistic?</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#if-relationships-are-symmetrical-i.e.linear-use-current-techniques"><i class="fa fa-check"></i><b>2.4.1</b> If relationships are symmetrical, i.e. linear, use current techniques</a></li>
+<li class="chapter" data-level="2.4.2" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#if-relationships-are-assymetric-i.e.glms-or-other-nonlinearities"><i class="fa fa-check"></i><b>2.4.2</b> If relationships are assymetric, i.e. GLMs or other nonlinearities</a></li>
+<li class="chapter" data-level="2.4.3" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#if-relationships-are-asymmetric-and-no-known-directionality"><i class="fa fa-check"></i><b>2.4.3</b> If relationships are asymmetric and no known directionality</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#correlated-errors"><i class="fa fa-check"></i><b>2.5</b> Correlated errors</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#not-a-problem-in-a-piecewise-approach-due-to-lack-of-influence-on-parameter-estimation"><i class="fa fa-check"></i><b>2.5.1</b> Not a problem in a piecewise approach due to lack of influence on parameter estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#latent-variables-and-the-c-statistic"><i class="fa fa-check"></i><b>2.6</b> Latent variables and the C-Statistic?</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="appendix-glms-nonlinearities-and-c-statistics.html"><a href="appendix-glms-nonlinearities-and-c-statistics.html#can-estimate-lvs-separately-and-still-use-same-graph-approach"><i class="fa fa-check"></i><b>2.6.1</b> Can estimate lVs separately, and still use same graph approach</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Structural Equation Modeling for Ecology and Evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix-glms-nonlinearities-and-c-statistics" class="section level1">
+<h1><span class="header-section-number">2</span> (APPENDIX) GLMs, Nonlinearities and C-statistics</h1>
+<div id="testing-models-in-sem" class="section level2">
+<h2><span class="header-section-number">2.1</span> Testing models in SEM</h2>
+</div>
+<div id="what-is-the-c-statistic" class="section level2">
+<h2><span class="header-section-number">2.2</span> What is the C-statistic</h2>
+<div id="definition-of-d-separation-from-pearl" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Definition of D-separation from Pearl</h3>
+</div>
+<div id="formation-by-shipley-into-a-single-statistic" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Formation by Shipley into a single statistic</h3>
+</div>
+</div>
+<div id="what-is-a-c-static-or-its-ilk-for" class="section level2">
+<h2><span class="header-section-number">2.3</span> What is a C-static or its ilk for</h2>
+<div id="comparison-to-a-saturated-model" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Comparison to a saturated model</h3>
+<ul>
+<li>Currently with how we use the c-statistic</li>
+</ul>
+</div>
+<div id="comparison-to-an-alternate-model" class="section level3">
+<h3><span class="header-section-number">2.3.2</span> Comparison to an alternate model</h3>
+<ul>
+<li>New</li>
+</ul>
+</div>
+<div id="information-theoretic-approaches-to-model-comparison" class="section level3">
+<h3><span class="header-section-number">2.3.3</span> Information theoretic approaches to model comparison</h3>
+<ul>
+<li>Shipley paper</li>
+<li>MUST HAVE SAME VARIABLES</li>
+<li>Other ICs that might be better</li>
+</ul>
+</div>
+</div>
+<div id="how-do-we-calculate-information-about-missing-links-to-integrate-into-a-c-type-statistic" class="section level2">
+<h2><span class="header-section-number">2.4</span> How do we calculate information about missing links to integrate into a c-type statistic?</h2>
+<div id="if-relationships-are-symmetrical-i.e.linear-use-current-techniques" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> If relationships are symmetrical, i.e. linear, use current techniques</h3>
+</div>
+<div id="if-relationships-are-assymetric-i.e.glms-or-other-nonlinearities" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> If relationships are assymetric, i.e. GLMs or other nonlinearities</h3>
+<ul>
+<li>You can specificy directionality if you know it
+<ul>
+<li>Do no present c-statistic unless user specifies directionality</li>
+<li>list of formulae to specify directions</li>
+<li>If one of the variables is exogenous, directionality <em>is</em> specified</li>
+</ul></li>
+</ul>
+</div>
+<div id="if-relationships-are-asymmetric-and-no-known-directionality" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> If relationships are asymmetric and no known directionality</h3>
+<ul>
+<li>Abandon SEM - you don’t know your model!</li>
+<li>Do not report C statistic</li>
+<li>Conservative hack: choose the lower p-value, but make user aware</li>
+</ul>
+</div>
+</div>
+<div id="correlated-errors" class="section level2">
+<h2><span class="header-section-number">2.5</span> Correlated errors</h2>
+<div id="not-a-problem-in-a-piecewise-approach-due-to-lack-of-influence-on-parameter-estimation" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Not a problem in a piecewise approach due to lack of influence on parameter estimation</h3>
+</div>
+</div>
+<div id="latent-variables-and-the-c-statistic" class="section level2">
+<h2><span class="header-section-number">2.6</span> Latent variables and the C-Statistic?</h2>
+<div id="can-estimate-lvs-separately-and-still-use-same-graph-approach" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Can estimate lVs separately, and still use same graph approach</h3>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="why-structural-equation-modeling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

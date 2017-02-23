@@ -1,4 +1,10 @@
-# GLMs, Nonlinearities and C-statistics {-}
+# GLMs, Nonlinearities and C-statistics  
+
+## Testing models in SEM
+
+## What is the C-statistic
+### Definition of D-separation from Pearl
+### Formation by Shipley into a single statistic
 
 ## What is a C-static or its ilk for
 ### Comparison to a saturated model
@@ -25,3 +31,9 @@
 - Abandon SEM - you don't know your model!
   - Do not report C statistic
 - Conservative hack: choose the lower p-value, but make user aware
+
+## Correlated errors
+### Not a problem in a piecewise approach due to lack of influence on parameter estimation
+
+## Latent variables and the C-Statistic?
+### Can estimate lVs separately, and still use same graph approach
