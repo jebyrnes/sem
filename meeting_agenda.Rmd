@@ -35,9 +35,21 @@
 7. Fitting and evaluating True multilevel models  
 - In a nutshell, you need to capture those intercepts into a different model in a separate dataset
 - Algorithmic solution?
+- Talked about it a lot in the context of a single multilevel model
+- Where does this enter into SEM?
+- We can evaluate d-sep relationships
+- We can calculate range standardized coefficients, but not classical Std. Coefs
+- We do not know how to properly calculate C
+- We do not then know how to translate into AIC, or how to work with BIC
 
-8. Standardized coefficients for nonlinear variables & glms  ??   
-- HAHAHAHAHA - man have we failed here so far
+8. Standardized coefficients for nonlinear variables & glms  x  
+  - HAHAHAHAHA - man have we failed here so far...
+  - But Jim provides hope!
+  - And then we nail it 
+      - denominator SD uses the link function  
+      - Numerator is a block of linear and nonlinear variables combined
+  - With interaction effects, need to incorporate block approach
+  
 
 9. Prediction with error (maybe with Jon this afternoon?) x  
 - i.e. for forecasting  
@@ -78,10 +90,32 @@
 - Sum Bayesian p-values?
 - Jim says 'good luck with that' - lots of issues, limit to what he can focus on
 - Need to talk with a Bayesian statistician
+  
+14. Composite variables in a piecewise approach x
+  - Natural  
+  - Fit model with no composite, then refit with derived composite  
 
-14. Roadmap for piecewiseSEM  
+15. Roadmap for piecewiseSEM  
 
-15. Teaching roadmap  
+16. Teaching roadmap  
 - http://www.nwrc.usgs.gov/SEM/ (old)
 - http://structuralequations.org (old)  
 - http://bit.ly/graceSEM
+
+
+**MARCHING ORDERS**
+  - Jon: Make sure we have addressed issues with glms and c statistic in piecewiseSEM
+  - Jon: Implement standarized coefficients for nonlinear and non-gaussian responses
+  - Jim will validate two-stage latent variable technique with KB
+  - Jim will make indirect effect demos and validate the for glms
+  - Jim will validate the correlated error conclusions
+  - Jarrett will write simulation-based prediction methods/query engine
+  - Jarrett will turn prediction into generalized method for teasing apart indirect effects
+      - One unit change from mean as default? User has to query with range
+      - Compare to direct effects
+      - Maybe specify pathways for query engine?
+  - Jarrett/Jon will flesh out c-stat outline  
+  - Jim will flesh out an indirect effects and queries outline  
+  - Jim/Jon will outline a Latent and composite variables in piecewiseSEM paper  
+  - Jarrett/Jon will make a teaching outline for bookdown site  
+  - All will ponder multilevel model issues  

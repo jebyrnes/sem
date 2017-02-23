@@ -1,7 +1,8 @@
 rmd_files: ["index.Rmd",  "why.Rmd", "meeting_agenda.Rmd", "c_statistic.Rmd"]
 
-output:
-  bookdown::gitbook:
-    config:
-      toc:
-      collapse: section
+bookdown::gitbook:
+  config:
+    toc:
+    collapse: section
+    before: |
+        <li><strong><a href="./">SEM for EEB</a></strong></li>
