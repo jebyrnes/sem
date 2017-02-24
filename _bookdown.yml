@@ -3,6 +3,9 @@ rmd_files: ["index.Rmd",  "why.Rmd", "meeting_agenda.Rmd", "c_statistic.Rmd"]
 bookdown::gitbook:
   config:
     toc:
-    collapse: section
-    before: |
-        <li><strong><a href="./">SEM for EEB</a></strong></li>
+      collapse: section
+      scroll_highlight: yes
+      before: SEM in EEB
+      after: null
+    toolbar:
+      position: fixed

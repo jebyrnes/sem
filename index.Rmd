@@ -7,6 +7,15 @@ github-repo: jebyrnes/sem
 twitter-handle: jebyrnes
 site: bookdown::bookdown_site
 documentclass: book
+bookdown::gitbook:
+  config:
+    toc:
+      collapse: section
+      scroll_highlight: yes
+      before: SEM in EEB
+      after: null
+    toolbar:
+      position: fixed
 ---
 
 # Welcome {-}
