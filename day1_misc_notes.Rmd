@@ -1,0 +1,89 @@
+# Day 1 Notes {-}
+
+- Jon's interest is as a `piecewiseSEM` author
+
+- Jarrett's motivation is as an educator who gets a lot of questions that remain unanswered and as someone who wants to make analytic techniques as accessible as possible.  
+
+- Jim's motivation is as someone who wants to solidify SEM within Ecology within the bounds of his career.  
+      - Trying hard to focus on methodoloy  
+      - Not just providing practical solutions, but providing explications  
+      - Trying to combine modules and tutorials on a website with papers that will go through and explicate them in a clear fashion  
+      - Has a PhD statistician on staff & a 5 year agreement w/ Ken Bollen  
+      - If we do work on something, will want to involve Ken  
+
+- ACTION ITEM: Jim will give Jon the paper and code for the HBIC
+
+- ACTION ITEM: Jarrett send around dcor stuff
+
+```{r glm_betas}
+library(dplyr)
+library(QuantPsyc)
+set.seed(31415)
+
+#create a data frame with a linear relationship
+#and three variables
+ndf_linear <- data.frame(x1=runif(100,10,100),
+                         x2 = runif(100,10,100),
+                         x3 = runif(100,10,100)) %>%
+  mutate(y = rnorm(100, x1 + 2*x2 + 3*x3, 500))
+
+#fit the multiple regression
+lm_y <- lm(y ~ x1 + x2 + x3, data=ndf_linear)
+
+#Now, make a data frame where x2 and x3 are 0
+x1_data <- mutate(ndf_linear, x2=0, x3=0) 
+
+#what is the effect of only x1 for y hat
+y_only_x1 <- predict(lm_y, type="response", newdata=x1_data)
+
+#What is the relationship between y and the unique 
+#effect of x1 on yhat?
+lm_x1 <- lm(y ~ y_only_x1, data=ndf_linear) 
+
+#compare coefficients - why do these not agree
+lm.beta(lm_y)
+sqrt(summary(lm_x1)$r.squared)
+
+#------
+## Try a residual approach
+lm_x2_x3 <- lm(y ~ x2 + x3, data=ndf_linear)
+r_x2_x3 <- residuals(lm_x2_x3)
+
+lm_x1 <- lm(x1 ~ x2 + x3, data=ndf_linear)
+r_x1 <- residuals(lm_x1)
+
+lm_x1_res <- lm(r_x2_x3 ~ r_x1, data=ndf_linear)
+
+lm.beta(lm_y)
+sqrt(summary(lm_x1_res)$r.squared)
+
+#recover the coefficient
+denom <- sqrt(var(r_x1)/var(r_x2_x3))
+sqrt(summary(lm_x1_res)$r.squared)/denom
+
+###
+#run the model with 2 predictors
+lm_y_nox1 <- lm(y ~ x2+x3, data=ndf_linear)
+#request the residuals
+r_nox1 <- residuals(lm_y_nox1)
+#regress those residuals on the 3rd predictor
+lm_x1_r <- lm(r_nox1 ~ x1, data=ndf_linear)
+
+lm.beta(lm_y)
+sqrt(summary(lm_x1_r)$r.squared)
+
+## Just one
+z <- lm(y ~ x1, data=ndf_linear)
+p <- predict(z)
+l <- lm(y ~ p, data=ndf_linear)
+lm.beta(z)
+sqrt(summary(l)$r.squared)
+
+## Two
+## Just one
+z_1 <- lm(y ~ x1 + x2, data=ndf_linear)
+p_1 <- predict(z_1, newdata=mutate(ndf_linear, x2=0))
+l_1 <- lm(y ~ p_1, data=ndf_linear)
+lm.beta(z_1)
+sqrt(summary(l_1)$r.squared)
+```
