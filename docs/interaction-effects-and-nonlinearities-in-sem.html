@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Structural Equation Modeling for Ecology and Evolution</title>
+  <meta name="description" content="Structural Equation Modeling for Ecology and Evolution">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Structural Equation Modeling for Ecology and Evolution" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://jebyrnes.github.io/sem" />
+  
+  
+  <meta name="github-repo" content="jebyrnes/sem" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Structural Equation Modeling for Ecology and Evolution" />
+  <meta name="twitter:site" content="@jebyrnes" />
+  
+  
+
+<meta name="author" content="Jarrett Byrnes">
+<meta name="author" content="Jon Lefcheck">
+<meta name="author" content="James Grace">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="fitting-with-bayesian-approaches.html">
+<link rel="next" href="latent-variables.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I Jarrett’s Suggestion for a TOC</b></span></li>
+<li class="part"><span><b>II The Basics</b></span></li>
+<li class="chapter" data-level="1" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html"><i class="fa fa-check"></i><b>1</b> Why Structural Equation Modeling?</a><ul>
+<li class="chapter" data-level="1.1" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#the-world-we-grew-up-in"><i class="fa fa-check"></i><b>1.1</b> The world we grew up in</a></li>
+<li class="chapter" data-level="1.2" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#exploring-systems"><i class="fa fa-check"></i><b>1.2</b> Exploring Systems</a></li>
+<li class="chapter" data-level="1.3" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#one-car-many-engines"><i class="fa fa-check"></i><b>1.3</b> One Car, Many Engines</a></li>
+<li class="chapter" data-level="1.4" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#the-r-infrastructure"><i class="fa fa-check"></i><b>1.4</b> The R infrastructure</a></li>
+<li class="chapter" data-level="1.5" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#the-example-data-sets-in-this-book"><i class="fa fa-check"></i><b>1.5</b> The example data sets in this book</a></li>
+</ul></li>
+<li class="part"><span><b>III The Language of SEMs</b></span><ul>
+<li class="chapter" data-level="1.6" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#boxes-circles-and-hexagons-oh-my"><i class="fa fa-check"></i><b>1.6</b> Boxes, Circles, and Hexagons, oh my!</a></li>
+<li class="chapter" data-level="1.7" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#paths"><i class="fa fa-check"></i><b>1.7</b> Paths</a></li>
+<li class="chapter" data-level="1.8" data-path="why-structural-equation-modeling.html"><a href="why-structural-equation-modeling.html#recursive-and-non-recursive-models"><i class="fa fa-check"></i><b>1.8</b> Recursive and non-recursive models</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="building-multivariate-causal-models.html"><a href="building-multivariate-causal-models.html"><i class="fa fa-check"></i><b>2</b> Building Multivariate Causal Models</a><ul>
+<li class="chapter" data-level="2.1" data-path="building-multivariate-causal-models.html"><a href="building-multivariate-causal-models.html#granger-causality"><i class="fa fa-check"></i><b>2.1</b> Granger Causality</a></li>
+<li class="chapter" data-level="2.2" data-path="building-multivariate-causal-models.html"><a href="building-multivariate-causal-models.html#a-primer-on-causality-in-models-sensu-pearl"><i class="fa fa-check"></i><b>2.2</b> A primer on Causality in models (sensu Pearl)</a></li>
+<li class="chapter" data-level="2.3" data-path="building-multivariate-causal-models.html"><a href="building-multivariate-causal-models.html#causality-and-unmeasured-variables"><i class="fa fa-check"></i><b>2.3</b> Causality and Unmeasured variables</a></li>
+<li class="chapter" data-level="2.4" data-path="building-multivariate-causal-models.html"><a href="building-multivariate-causal-models.html#conditional-independence-and-directed-separation"><i class="fa fa-check"></i><b>2.4</b> Conditional Independence and Directed Separation</a></li>
+</ul></li>
+<li class="part"><span><b>IV Fitting and Evaluating Models</b></span></li>
+<li class="chapter" data-level="3" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html"><i class="fa fa-check"></i><b>3</b> Fitting with Likelihood</a><ul>
+<li class="chapter" data-level="3.1" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html#fundamentals-of-technique"><i class="fa fa-check"></i><b>3.1</b> Fundamentals of technique</a></li>
+<li class="chapter" data-level="3.2" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html#how-to-fit"><i class="fa fa-check"></i><b>3.2</b> How to fit</a></li>
+<li class="chapter" data-level="3.3" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html#model-diagnostics"><i class="fa fa-check"></i><b>3.3</b> Model Diagnostics</a></li>
+<li class="chapter" data-level="3.4" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html#evaluation-of-a-fit-model"><i class="fa fa-check"></i><b>3.4</b> Evaluation of a Fit Model</a></li>
+<li class="chapter" data-level="3.5" data-path="fitting-with-likelihood.html"><a href="fitting-with-likelihood.html#prediction"><i class="fa fa-check"></i><b>3.5</b> Prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html"><i class="fa fa-check"></i><b>4</b> Fitting with piecewise Approaches</a><ul>
+<li class="chapter" data-level="4.1" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html#fundamentals-of-technique-1"><i class="fa fa-check"></i><b>4.1</b> Fundamentals of technique</a></li>
+<li class="chapter" data-level="4.2" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html#how-to-fit-1"><i class="fa fa-check"></i><b>4.2</b> How to fit</a></li>
+<li class="chapter" data-level="4.3" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html#model-diagnostics-1"><i class="fa fa-check"></i><b>4.3</b> Model Diagnostics</a></li>
+<li class="chapter" data-level="4.4" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html#evaluation-of-a-fit-model-1"><i class="fa fa-check"></i><b>4.4</b> Evaluation of a Fit Model</a></li>
+<li class="chapter" data-level="4.5" data-path="fitting-with-piecewise-approaches.html"><a href="fitting-with-piecewise-approaches.html#prediction-1"><i class="fa fa-check"></i><b>4.5</b> Prediction</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html"><i class="fa fa-check"></i><b>5</b> Fitting with Bayesian Approaches</a><ul>
+<li class="chapter" data-level="5.1" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html#fundamentals-of-technique-2"><i class="fa fa-check"></i><b>5.1</b> Fundamentals of technique</a></li>
+<li class="chapter" data-level="5.2" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html#how-to-fit-2"><i class="fa fa-check"></i><b>5.2</b> How to fit</a></li>
+<li class="chapter" data-level="5.3" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html#model-diagnostics-2"><i class="fa fa-check"></i><b>5.3</b> Model Diagnostics</a></li>
+<li class="chapter" data-level="5.4" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html#evaluation-of-a-fit-model-2"><i class="fa fa-check"></i><b>5.4</b> Evaluation of a Fit Model</a></li>
+<li class="chapter" data-level="5.5" data-path="fitting-with-bayesian-approaches.html"><a href="fitting-with-bayesian-approaches.html#prediction-2"><i class="fa fa-check"></i><b>5.5</b> Prediction</a></li>
+</ul></li>
+<li class="part"><span><b>V Advanced Model Components</b></span></li>
+<li class="chapter" data-level="6" data-path="interaction-effects-and-nonlinearities-in-sem.html"><a href="interaction-effects-and-nonlinearities-in-sem.html"><i class="fa fa-check"></i><b>6</b> Interaction Effects and Nonlinearities in SEM</a></li>
+<li class="chapter" data-level="7" data-path="latent-variables.html"><a href="latent-variables.html"><i class="fa fa-check"></i><b>7</b> Latent Variables</a></li>
+<li class="chapter" data-level="8" data-path="composite-variables.html"><a href="composite-variables.html"><i class="fa fa-check"></i><b>8</b> Composite Variables</a></li>
+<li class="chapter" data-level="9" data-path="multigroup-models.html"><a href="multigroup-models.html"><i class="fa fa-check"></i><b>9</b> Multigroup Models</a></li>
+<li class="chapter" data-level="10" data-path="categorical-predictors.html"><a href="categorical-predictors.html"><i class="fa fa-check"></i><b>10</b> Categorical Predictors</a></li>
+<li class="part"><span><b>VI Handling Correlation from Unmodled Variables</b></span></li>
+<li class="chapter" data-level="11" data-path="mixed-models-and-sem.html"><a href="mixed-models-and-sem.html"><i class="fa fa-check"></i><b>11</b> Mixed Models and SEM</a></li>
+<li class="chapter" data-level="12" data-path="phylogenetic-sem.html"><a href="phylogenetic-sem.html"><i class="fa fa-check"></i><b>12</b> Phylogenetic SEM</a></li>
+<li class="chapter" data-level="13" data-path="temporal-autocorrelation-in-sem.html"><a href="temporal-autocorrelation-in-sem.html"><i class="fa fa-check"></i><b>13</b> Temporal Autocorrelation in SEM</a></li>
+<li class="chapter" data-level="14" data-path="spatial-autocorrelation-in-sem.html"><a href="spatial-autocorrelation-in-sem.html"><i class="fa fa-check"></i><b>14</b> Spatial Autocorrelation in SEM</a></li>
+<li class="part"><span><b>VII Example Analyses</b></span></li>
+<li class="part"><span><b>VIII Sample Chapters Below Here for Now</b></span></li>
+<li class="chapter" data-level="15" data-path="why-structural-equation-modeling-1.html"><a href="why-structural-equation-modeling-1.html"><i class="fa fa-check"></i><b>15</b> Why Structural Equation Modeling</a><ul>
+<li class="chapter" data-level="15.1" data-path="why-structural-equation-modeling-1.html"><a href="why-structural-equation-modeling-1.html#the-world-we-grew-up-in-1"><i class="fa fa-check"></i><b>15.1</b> The World We Grew Up In</a></li>
+<li class="chapter" data-level="15.2" data-path="why-structural-equation-modeling-1.html"><a href="why-structural-equation-modeling-1.html#exploring-systems-1"><i class="fa fa-check"></i><b>15.2</b> Exploring Systems</a></li>
+<li class="chapter" data-level="15.3" data-path="why-structural-equation-modeling-1.html"><a href="why-structural-equation-modeling-1.html#one-car-many-engines-1"><i class="fa fa-check"></i><b>15.3</b> One Car, Many Engines</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="path-coefficients.html"><a href="path-coefficients.html"><i class="fa fa-check"></i><b>16</b> Path Coefficients</a><ul>
+<li class="chapter" data-level="16.1" data-path="path-coefficients.html"><a href="path-coefficients.html#unstandardized-and-standardized-coefficients"><i class="fa fa-check"></i><b>16.1</b> 1.1 Unstandardized and Standardized Coefficients</a></li>
+<li class="chapter" data-level="16.2" data-path="path-coefficients.html"><a href="path-coefficients.html#scale-standardization"><i class="fa fa-check"></i><b>16.2</b> 1.2 Scale Standardization</a></li>
+<li class="chapter" data-level="16.3" data-path="path-coefficients.html"><a href="path-coefficients.html#range-standardization"><i class="fa fa-check"></i><b>16.3</b> 1.3 Range Standardization</a></li>
+<li class="chapter" data-level="16.4" data-path="path-coefficients.html"><a href="path-coefficients.html#binomial-response-models"><i class="fa fa-check"></i><b>16.4</b> 1.4 Binomial Response Models</a></li>
+<li class="chapter" data-level="16.5" data-path="path-coefficients.html"><a href="path-coefficients.html#scaling-to-other-non-normal-distributions"><i class="fa fa-check"></i><b>16.5</b> 1.5 Scaling to Other Non-Normal Distributions</a></li>
+<li class="chapter" data-level="16.6" data-path="path-coefficients.html"><a href="path-coefficients.html#references"><i class="fa fa-check"></i><b>16.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html"><i class="fa fa-check"></i><b>17</b> Global Estimation and PiecewiseSEM</a><ul>
+<li class="chapter" data-level="17.1" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#what-is-covariance"><i class="fa fa-check"></i><b>17.1</b> 1.1 What is (Co)variance?</a></li>
+<li class="chapter" data-level="17.2" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#regression-coefficients"><i class="fa fa-check"></i><b>17.2</b> 1.2 Regression Coefficients</a><ul>
+<li class="chapter" data-level="17.2.1" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-1-unspecified-relationships-among-exogenous-variables-are-simply-their-bivariate-correlations."><i class="fa fa-check"></i><b>17.2.1</b> Rule 1: Unspecified relationships among exogenous variables are simply their bivariate correlations.</a></li>
+<li class="chapter" data-level="17.2.2" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-2-when-two-variables-are-connected-by-a-single-path-the-coefficient-of-that-path-is-the-regression-coefficient."><i class="fa fa-check"></i><b>17.2.2</b> Rule 2: When two variables are connected by a single path, the coefficient of that path is the regression coefficient.</a></li>
+<li class="chapter" data-level="17.2.3" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-3-the-strength-of-a-compound-path-one-that-includes-multiple-links-is-the-product-of-the-individual-coefficients."><i class="fa fa-check"></i><b>17.2.3</b> Rule 3: The strength of a compound path (one that includes multiple links) is the product of the individual coefficients.</a></li>
+<li class="chapter" data-level="17.2.4" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-4.-when-variables-are-connected-by-more-than-one-pathway-each-pathway-is-the-partial-regression-coefficient."><i class="fa fa-check"></i><b>17.2.4</b> Rule 4. When variables are connected by more than one pathway, each pathway is the ‘partial’ regression coefficient.</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-5-errors-on-endogenous-variables-relate-the-unexplained-correlations-or-variances-arising-from-unmeasured-variables."><i class="fa fa-check"></i><b>17.3</b> Rule 5: Errors on endogenous variables relate the unexplained correlations or variances arising from unmeasured variables.</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-6-unanalyzed-residual-correlations-among-two-endogenous-variables-are-their-partial-correlations."><i class="fa fa-check"></i><b>17.3.1</b> Rule 6: Unanalyzed (residual) correlations among two endogenous variables are their partial correlations.</a></li>
+<li class="chapter" data-level="17.3.2" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-7-the-total-effect-one-variable-has-another-is-the-sum-of-its-direct-and-indirect-effects."><i class="fa fa-check"></i><b>17.3.2</b> Rule 7: The total effect one variable has another is the sum of its direct and indirect effects.</a></li>
+<li class="chapter" data-level="17.3.3" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#rule-8-the-total-effect-including-undirected-paths-is-equivalent-to-the-total-correlation."><i class="fa fa-check"></i><b>17.3.3</b> Rule 8: The total effect (including undirected paths) is equivalent to the total correlation.</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#variance-based-structural-equation-modeling"><i class="fa fa-check"></i><b>17.4</b> 1.3 Variance-based Structural Equation Modeling</a></li>
+<li class="chapter" data-level="17.5" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#model-identifiability"><i class="fa fa-check"></i><b>17.5</b> 1.4 Model Identifiability</a></li>
+<li class="chapter" data-level="17.6" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#goodness-of-fit-measures"><i class="fa fa-check"></i><b>17.6</b> 1.5 Goodness-of-fit Measures</a></li>
+<li class="chapter" data-level="17.7" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#model-fitting-using-lavaan"><i class="fa fa-check"></i><b>17.7</b> 1.6 Model Fitting Using <em>lavaan</em></a><ul>
+<li class="chapter" data-level="17.7.1" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#lavaan-vs-lm"><i class="fa fa-check"></i><b>17.7.1</b> 1.6.1 <em>lavaan</em> vs <code>lm</code></a></li>
+<li class="chapter" data-level="17.7.2" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#sem-using-lavaan"><i class="fa fa-check"></i><b>17.7.2</b> 1.6.2 SEM using <em>lavaan</em></a></li>
+<li class="chapter" data-level="17.7.3" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#testing-alternate-structure-using-lavaan"><i class="fa fa-check"></i><b>17.7.3</b> 1.6.3 Testing Alternate Structure using <em>lavaan</em></a></li>
+</ul></li>
+<li class="chapter" data-level="17.8" data-path="global-estimation-and-piecewisesem.html"><a href="global-estimation-and-piecewisesem.html#references-1"><i class="fa fa-check"></i><b>17.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html"><i class="fa fa-check"></i><b>18</b> Latent Variable Modeling</a><ul>
+<li class="chapter" data-level="18.1" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#introduction-to-latent-variable-modeling"><i class="fa fa-check"></i><b>18.1</b> 1.1 Introduction to Latent Variable Modeling</a></li>
+<li class="chapter" data-level="18.2" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#application-of-latent-variables-to-path-models"><i class="fa fa-check"></i><b>18.2</b> 1.2 Application of Latent Variables to Path Models</a></li>
+<li class="chapter" data-level="18.3" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#latent-variables-in-lavaan"><i class="fa fa-check"></i><b>18.3</b> 1.3 Latent Variables in <em>lavaan</em></a></li>
+<li class="chapter" data-level="18.4" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#multi-indicator-latent-variables"><i class="fa fa-check"></i><b>18.4</b> 1.4 Multi-indicator Latent Variables</a></li>
+<li class="chapter" data-level="18.5" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#confirmatory-factor-analysis"><i class="fa fa-check"></i><b>18.5</b> 1.6 Confirmatory Factor Analysis</a></li>
+<li class="chapter" data-level="18.6" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#travis-grace-2010-an-example"><i class="fa fa-check"></i><b>18.6</b> 1.7 Travis &amp; Grace (2010): An Example</a></li>
+<li class="chapter" data-level="18.7" data-path="latent-variable-modeling.html"><a href="latent-variable-modeling.html#references-2"><i class="fa fa-check"></i><b>18.7</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="composite-variables-1.html"><a href="composite-variables-1.html"><i class="fa fa-check"></i><b>19</b> Composite Variables</a><ul>
+<li class="chapter" data-level="19.1" data-path="composite-variables-1.html"><a href="composite-variables-1.html#what-is-a-composite-variable"><i class="fa fa-check"></i><b>19.1</b> 1.1 What is a Composite Variable?</a></li>
+<li class="chapter" data-level="19.2" data-path="composite-variables-1.html"><a href="composite-variables-1.html#constructing-a-composite-variable"><i class="fa fa-check"></i><b>19.2</b> 1.2 Constructing a Composite Variable</a></li>
+<li class="chapter" data-level="19.3" data-path="composite-variables-1.html"><a href="composite-variables-1.html#grace-keeley-revisited-a-worked-example"><i class="fa fa-check"></i><b>19.3</b> 1.3 Grace &amp; Keeley Revisited: A Worked Example</a></li>
+<li class="chapter" data-level="19.4" data-path="composite-variables-1.html"><a href="composite-variables-1.html#composites-in-piecewisesem"><i class="fa fa-check"></i><b>19.4</b> 1.4 Composites in <em>piecewiseSEM</em></a></li>
+<li class="chapter" data-level="19.5" data-path="composite-variables-1.html"><a href="composite-variables-1.html#references-3"><i class="fa fa-check"></i><b>19.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html"><i class="fa fa-check"></i><b>20</b> Categorical Exogenous Variables</a><ul>
+<li class="chapter" data-level="20.1" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html#introduction-to-exogenous-categorical-variables"><i class="fa fa-check"></i><b>20.1</b> 1.1 Introduction to Exogenous Categorical Variables</a></li>
+<li class="chapter" data-level="20.2" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html#exogenous-categorical-variables-as-marginal-means"><i class="fa fa-check"></i><b>20.2</b> 1.3 Exogenous Categorical Variables as Marginal Means</a></li>
+<li class="chapter" data-level="20.3" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html#exogenous-categorical-variables-as-marginal-means-a-worked-example"><i class="fa fa-check"></i><b>20.3</b> 1.3 Exogenous Categorical Variables as Marginal Means: A Worked Example</a></li>
+<li class="chapter" data-level="20.4" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html#endogenous-categorical-variables"><i class="fa fa-check"></i><b>20.4</b> 1.3 Endogenous Categorical Variables</a></li>
+<li class="chapter" data-level="20.5" data-path="categorical-exogenous-variables.html"><a href="categorical-exogenous-variables.html#references-4"><i class="fa fa-check"></i><b>20.5</b> References</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendices</b></span></li>
+<li class="chapter" data-level="A" data-path="agenda-and-notes-from-february-meeting.html"><a href="agenda-and-notes-from-february-meeting.html"><i class="fa fa-check"></i><b>A</b> Agenda and Notes from February Meeting</a></li>
+<li class="chapter" data-level="B" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html"><i class="fa fa-check"></i><b>B</b> GLMs, Nonlinearities and C-statistics</a><ul>
+<li class="chapter" data-level="B.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#testing-models-in-sem"><i class="fa fa-check"></i><b>B.1</b> Testing models in SEM</a></li>
+<li class="chapter" data-level="B.2" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#what-is-the-c-statistic"><i class="fa fa-check"></i><b>B.2</b> What is the C-statistic</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#definition-of-d-separation-from-pearl"><i class="fa fa-check"></i><b>B.2.1</b> Definition of D-separation from Pearl</a></li>
+<li class="chapter" data-level="B.2.2" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#formation-by-shipley-into-a-single-statistic"><i class="fa fa-check"></i><b>B.2.2</b> Formation by Shipley into a single statistic</a></li>
+</ul></li>
+<li class="chapter" data-level="B.3" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#what-is-a-c-static-or-its-ilk-for"><i class="fa fa-check"></i><b>B.3</b> What is a C-static or its ilk for</a><ul>
+<li class="chapter" data-level="B.3.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#comparison-to-a-saturated-model"><i class="fa fa-check"></i><b>B.3.1</b> Comparison to a saturated model</a></li>
+<li class="chapter" data-level="B.3.2" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#comparison-to-an-alternate-model"><i class="fa fa-check"></i><b>B.3.2</b> Comparison to an alternate model</a></li>
+<li class="chapter" data-level="B.3.3" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#information-theoretic-approaches-to-model-comparison"><i class="fa fa-check"></i><b>B.3.3</b> Information theoretic approaches to model comparison</a></li>
+</ul></li>
+<li class="chapter" data-level="B.4" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#how-do-we-calculate-information-about-missing-links-to-integrate-into-a-c-type-statistic"><i class="fa fa-check"></i><b>B.4</b> How do we calculate information about missing links to integrate into a c-type statistic?</a><ul>
+<li class="chapter" data-level="B.4.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#if-relationships-are-symmetrical-i.e.linear-use-current-techniques"><i class="fa fa-check"></i><b>B.4.1</b> If relationships are symmetrical, i.e. linear, use current techniques</a></li>
+<li class="chapter" data-level="B.4.2" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#if-relationships-are-assymetric-i.e.glms-or-other-nonlinearities"><i class="fa fa-check"></i><b>B.4.2</b> If relationships are assymetric, i.e. GLMs or other nonlinearities</a></li>
+<li class="chapter" data-level="B.4.3" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#if-relationships-are-asymmetric-and-no-known-directionality"><i class="fa fa-check"></i><b>B.4.3</b> If relationships are asymmetric and no known directionality</a></li>
+</ul></li>
+<li class="chapter" data-level="B.5" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#correlated-errors"><i class="fa fa-check"></i><b>B.5</b> Correlated errors</a><ul>
+<li class="chapter" data-level="B.5.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#not-a-problem-in-a-piecewise-approach-due-to-lack-of-influence-on-parameter-estimation"><i class="fa fa-check"></i><b>B.5.1</b> Not a problem in a piecewise approach due to lack of influence on parameter estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="B.6" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#latent-variables-and-the-c-statistic"><i class="fa fa-check"></i><b>B.6</b> Latent variables and the C-Statistic?</a><ul>
+<li class="chapter" data-level="B.6.1" data-path="glms-nonlinearities-and-c-statistics.html"><a href="glms-nonlinearities-and-c-statistics.html#can-estimate-lvs-separately-and-still-use-same-graph-approach"><i class="fa fa-check"></i><b>B.6.1</b> Can estimate lVs separately, and still use same graph approach</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Structural Equation Modeling for Ecology and Evolution</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="interaction-effects-and-nonlinearities-in-sem" class="section level1">
+<h1><span class="header-section-number">6</span> Interaction Effects and Nonlinearities in SEM</h1>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="fitting-with-bayesian-approaches.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="latent-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

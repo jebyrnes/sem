@@ -10,7 +10,7 @@ documentclass: book
 bookdown::gitbook:
   config:
     toc:
-      scroll_highlight: yes
+      collapse: section
       before: SEM in EEB
       after: null
     toolbar:
